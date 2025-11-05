@@ -1,0 +1,246 @@
+/* 🌸 ฟอนต์น่ารักจาก Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Itim&display=swap');
+
+body {
+  font-family: 'Itim', cursive;
+  background-color: #fffaf8;
+  margin: 0;
+  padding: 0;
+  color: #5a4a4a; /* สีตัวอักษรหลัก จางนิดๆ */
+}
+
+.container {
+  margin-top: 40px;
+  text-align: center;
+}
+
+/* หัวข้อใหญ่ */
+.title {
+  color: #d46a6a; /* ชมพูอมแดงจางๆ */
+  font-weight: bold;
+  margin-bottom: 25px;
+  font-size: 2rem;
+  font-family: 'Itim', cursive;
+}
+
+/* ✅ แสดง 5 เมนูต่อแถว */
+.menu-grid {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 20px;
+  justify-items: center;
+}
+
+/* ✅ การ์ดแต่ละใบ */
+.menu-card {
+  background-color: #fff7f5;
+  border: 3px solid #f5c1b4;
+  border-radius: 15px;
+  width: 190px;
+  padding: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
+  transition: 0.3s;
+  font-family: 'Itim', cursive;
+  color: #5e4a4a; /* สีตัวอักษรในการ์ด จางลง */
+}
+
+.menu-card:hover {
+  transform: scale(1.05);
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.15);
+}
+
+/* ✅ รูปเมนู */
+.menu-image {
+  width: 100%;
+  height: 110px;
+  object-fit: cover;
+  border-radius: 10px;
+}
+
+/* ✅ ชื่อเมนู */
+.menu-title {
+  font-size: 1rem;
+  font-weight: bold;
+  color: #6b4a4a; /* จางลงจากเดิม */
+  margin-top: 8px;
+  font-family: 'Itim', cursive;
+}
+
+/* ✅ คำอธิบาย */
+.menu-desc {
+  font-size: 0.8rem;
+  color: #8c7a7a; /* สีเทาน้ำตาลอ่อน */
+  margin: 5px 0 10px;
+  font-family: 'Itim', cursive;
+}
+
+/* ✅ ปุ่ม */
+.menu-btn {
+  background-color: #f5c1b4;
+  color: #fff8f7; /* สีขาวอมชมพู */
+  border: none;
+  border-radius: 20px;
+  padding: 5px 15px;
+  cursor: pointer;
+  transition: 0.3s;
+  box-shadow: 0 2px 5px rgba(255, 182, 193, 0.4);
+  font-family: 'Itim', cursive;
+}
+
+/* ตอนเอาเมาส์วาง */
+.menu-btn:hover {
+  background-color: #e79b91;
+  box-shadow: 0 3px 10px rgba(255, 182, 193, 0.6);
+  transform: scale(1.05);
+}
+
+/* ✅ ตอนคลิก (active) */
+.menu-btn:active {
+  background-color: #fce4ec;
+  color: #4a2e2e;
+  box-shadow: inset 0 3px 6px rgba(0, 0, 0, 0.2),
+              0 0 10px rgba(255, 192, 203, 0.8);
+  transform: scale(0.96);
+}
+.menu-card {
+  background-color: #fff7f5;
+  border: 3px solid #f5c1b4;
+  border-radius: 15px;
+  width: 190px;
+  padding: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
+  transition: 0.3s;
+  font-family: 'Itim', cursive;
+  color: #5e4a4a;
+  position: relative;
+  overflow: hidden; /* กันลายฟันปลาล้น */
+}
+
+/* ✅ ทำลายฟันปลา */
+.menu-card::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: repeating-linear-gradient(
+    -45deg,
+    transparent,
+    transparent 8px,
+    rgba(245, 193, 180, 0.3) 8px,
+    rgba(245, 193, 180, 0.3) 16px
+  );
+  opacity: 0.3;
+  pointer-events: none;
+}
+
+/* ✅ สลับฟันปลาคนละทาง */
+.menu-card:nth-child(even)::before {
+  background-image: repeating-linear-gradient(
+    45deg,
+    transparent,
+    transparent 8px,
+    rgba(245, 193, 180, 0.3) 8px,
+    rgba(245, 193, 180, 0.3) 16px
+  );
+}
+/* 🌸 Navbar */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #fddede;
+  padding: 10px 40px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  font-family: 'Itim', cursive;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+.nav-logo {
+  color: #d46a6a;
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 15px;
+  margin: 0;
+  padding: 0;
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: #6b4a4a;
+  font-size: 1rem;
+  transition: 0.3s;
+}
+
+.nav-links a:hover {
+  color: #e79b91;
+  text-shadow: 0 0 5px rgba(255, 182, 193, 0.6);
+}
+/* 🌸 ปรับลิงก์ใน Navbar ให้มีเอฟเฟกต์นูน */
+.nav-links a {
+  text-decoration: none;
+  color: #6b4a4a;
+  font-size: 1rem;
+  transition: all 0.2s ease;
+  padding: 4px 10px; /* 🔸 ลดขอบรอบตัวอักษรลง */
+  border-radius: 10px;
+  display: inline-block;
+}
+
+
+/* เวลาวางเมาส์ */
+.nav-links a:hover {
+  color: #fff;
+  background-color: #e79b91;
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.2);
+  transform: translateY(-2px);
+}
+
+/* เวลากดคลิก */
+.nav-links a:active {
+  background-color: #f5c1b4;
+  box-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.3);
+  transform: translateY(2px);
+}
+
+/* 🌸 Footer */
+.footer {
+  background-color: #ffe4e1; /* ชมพูอ่อน */
+  text-align: center;
+  padding: 20px 0;
+  margin-top: 60px;
+  font-family: 'Itim', cursive;
+  color: #6b4a4a;
+  font-size: 0.95rem;
+  box-shadow: 0 -3px 10px rgba(0, 0, 0, 0.1);
+  border-top: 3px solid #f5c1b4;
+}
+
+.footer p {
+  margin: 0;
+}
+
+.footer-icons {
+  margin-top: 10px;
+}
+
+.footer-icons a {
+  color: #6b4a4a;
+  font-size: 1.2rem;
+  margin: 0 10px;
+  transition: all 0.3s ease;
+  text-decoration: none;
+}
+
+.footer-icons a:hover {
+  color: #e79b91;
+  transform: scale(1.2);
+}
